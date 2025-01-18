@@ -112,3 +112,6 @@ wheel==0.44.0
 # The following packages are considered to be unsafe in a requirements file:
 # pip
 # setuptools
+yake==0.4.8
+multi-rake==0.0.2
+keybert==0.8.5

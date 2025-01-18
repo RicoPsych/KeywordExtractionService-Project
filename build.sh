@@ -6,4 +6,4 @@ ruff check src --no-cache --verbose --fix
 ruff format src
 
 # Build Docker Image
-docker build -t renameme:latest .
+docker build -t keyword-extraction-service:latest .
