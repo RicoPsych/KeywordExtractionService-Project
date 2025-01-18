@@ -8,13 +8,25 @@ class multirakeService :
     def __init__(self):
         self.engine = multi_rake.Rake() #lan="pl"
 
-    def extract(self,text,ngram):
-        self.engine = multi_rake.Rake( max_words=ngram) 
+    def getLanguageCode(self, lang):
+        match lang:
+            case "en":
+                return "en"
+            case "pl":
+                return "pl"
+            case _ : 
+                return "en" # Could be also None, for automatic detection
+
+
+    def extract(self, text, ngram, lang):
+        languageCode= self.getLanguageCode(lang)
+        self.engine = multi_rake.Rake( max_words=ngram, language_code=languageCode) 
         ext = self.engine.apply(text)
         return [n[0].lower() for n in ext]
 
-    def extractDataset(self, dataset, ngram, results, uuid):
-        self.engine = multi_rake.Rake( max_words=ngram) 
+    def extractDataset(self, dataset, ngram, lang, results, uuid):
+        languageCode= self.getLanguageCode(lang)
+        self.engine = multi_rake.Rake( max_words=ngram, language_code=languageCode) 
         results[uuid] = { "progress": 0.00, "results": [] }
         size = len(dataset)
         i = 0

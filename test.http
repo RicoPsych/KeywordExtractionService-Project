@@ -11,6 +11,7 @@ POST http://127.0.0.1:8000/yake
 {
     "text":"April 1, 2011 - \"\"Bones\"\" actress Emily Deschanel and her husband, David Hornsby, are expecting their first child. Emily, who is the sister of actress Zoeey Deschanel, confirmed her pregnancy on Thursday. Deschanel and Hornsby, who is known for his role on \"\"It's Always Sunny in Philadelphia,\"\" began dating in 2007. The expectant couple married last September in LA. Emily Dechanel now joins the long list of women in Hollywood expecting babies this year. \"\"Emily Deschanel is pregnant,\"\" tweeted one Cleveland resident who watches \"\"Bones\"\" on local FOX 8. As fans are excited for Emily as she embarks on motherhood, some also wonder how her pregnancy will affect the show. Advertisement How do you think \"\"Bones\"\" will work around Emily Deschanel's pregnancy? Should they film around her third trimester, or dress her in bigger clothes, trying to hide her baby bump? Do you think Zooey Deschanel will make a fun Aunt? Leave your comments below. Check out more of the latest Celebrity and TV news here!"
     ,"ngram":3
+    ,"lang" : "en"
 }
 ###
 
@@ -27,14 +28,14 @@ POST http://127.0.0.1:8000/yake/dataset
         
     ],
     "ngram":3    
-
+    ,"lang" : "pl"
 }
 ###
 GET http://127.0.0.1:8000/yake/tasks
 
 
 ###
-GET http://127.0.0.1:8000/yake/dataset?uuid=b967efcb-383d-402e-a5bc-3612e5f89a73
+GET http://127.0.0.1:8000/yake/dataset?uuid=051fe6ca-1a4f-4a67-afb9-eef6150354a1
 ###
 
 
@@ -44,7 +45,8 @@ POST http://127.0.0.1:8000/multirake
 
 {
     "text":"April 1, 2011 - \"\"Bones\"\" actress Emily Deschanel and her husband, David Hornsby, are expecting their first child. Emily, who is the sister of actress Zoeey Deschanel, confirmed her pregnancy on Thursday. Deschanel and Hornsby, who is known for his role on \"\"It's Always Sunny in Philadelphia,\"\" began dating in 2007. The expectant couple married last September in LA. Emily Dechanel now joins the long list of women in Hollywood expecting babies this year. \"\"Emily Deschanel is pregnant,\"\" tweeted one Cleveland resident who watches \"\"Bones\"\" on local FOX 8. As fans are excited for Emily as she embarks on motherhood, some also wonder how her pregnancy will affect the show. Advertisement How do you think \"\"Bones\"\" will work around Emily Deschanel's pregnancy? Should they film around her third trimester, or dress her in bigger clothes, trying to hide her baby bump? Do you think Zooey Deschanel will make a fun Aunt? Leave your comments below. Check out more of the latest Celebrity and TV news here!"
-    ,"ngram":3
+    ,"ngram":3,
+    "lang":"en"
 }
 
 ###
@@ -59,8 +61,8 @@ POST http://127.0.0.1:8000/multirake/dataset
         ,"April 1, 2011 - \"\"Bones\"\" actress Emily Deschanel and her husband, David Hornsby, are expecting their first child. Emily, who is the sister of actress Zoeey Deschanel, confirmed her pregnancy on Thursday. Deschanel and Hornsby, who is known for his role on \"\"It's Always Sunny in Philadelphia,\"\" began dating in 2007. The expectant couple married last September in LA. Emily Dechanel now joins the long list of women in Hollywood expecting babies this year. \"\"Emily Deschanel is pregnant,\"\" tweeted one Cleveland resident who watches \"\"Bones\"\" on local FOX 8. As fans are excited for Emily as she embarks on motherhood, some also wonder how her pregnancy will affect the show. Advertisement How do you think \"\"Bones\"\" will work around Emily Deschanel's pregnancy? Should they film around her third trimester, or dress her in bigger clothes, trying to hide her baby bump? Do you think Zooey Deschanel will make a fun Aunt? Leave your comments below. Check out more of the latest Celebrity and TV news here!"
         
     ],
-    "ngram":3    
-
+    "ngram":3 
+    ,"lang":"en"
 }
 ###
 GET http://127.0.0.1:8000/multirake/tasks
@@ -75,7 +77,8 @@ POST http://127.0.0.1:8000/keybert
 
 {
     "text":"April 1, 2011 - \"\"Bones\"\" actress Emily Deschanel and her husband, David Hornsby, are expecting their first child. Emily, who is the sister of actress Zoeey Deschanel, confirmed her pregnancy on Thursday. Deschanel and Hornsby, who is known for his role on \"\"It's Always Sunny in Philadelphia,\"\" began dating in 2007. The expectant couple married last September in LA. Emily Dechanel now joins the long list of women in Hollywood expecting babies this year. \"\"Emily Deschanel is pregnant,\"\" tweeted one Cleveland resident who watches \"\"Bones\"\" on local FOX 8. As fans are excited for Emily as she embarks on motherhood, some also wonder how her pregnancy will affect the show. Advertisement How do you think \"\"Bones\"\" will work around Emily Deschanel's pregnancy? Should they film around her third trimester, or dress her in bigger clothes, trying to hide her baby bump? Do you think Zooey Deschanel will make a fun Aunt? Leave your comments below. Check out more of the latest Celebrity and TV news here!"
-    ,"ngram":3
+    ,"ngram":3,
+    "lang":"pl"
 }
 
 ###
@@ -91,7 +94,7 @@ POST http://127.0.0.1:8000/keybert/dataset
         
     ],
     "ngram":3    
-
+    ,"lang":"pl"
 }
 ###
 GET http://127.0.0.1:8000/keybert/tasks

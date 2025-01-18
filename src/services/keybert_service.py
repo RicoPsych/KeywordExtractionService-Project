@@ -8,13 +8,22 @@ class keybertService :
     def __init__(self):
         self.engine = keybert.KeyBERT() #lan="pl"
 
-    def extract(self,text,ngram):
-        self.engine = keybert.KeyBERT() 
+    def getModelForLanguage(self, lang):
+        match lang:
+            case "en":
+                return "all-MiniLM-L6-v2"
+            case _:
+                return "paraphrase-multilingual-MiniLM-L12-v2"
+            
+    def extract(self, text, ngram, lang):
+        model = self.getModelForLanguage(lang)
+        self.engine = keybert.KeyBERT(model=model) 
         ext = self.engine.extract_keywords(text,keyphrase_ngram_range=(1,ngram))
         return [n[0].lower() for n in ext]
 
-    def extractDataset(self, dataset, ngram, results, uuid):
-        self.engine = keybert.KeyBERT() 
+    def extractDataset(self, dataset, ngram, lang, results, uuid):
+        model = self.getModelForLanguage(lang)
+        self.engine = keybert.KeyBERT(model=model) 
         results[uuid] = { "progress": 0.00, "results": [] }
         size = len(dataset)
         i = 0
@@ -28,3 +37,4 @@ class keybertService :
         time.sleep(300)
         del results[uuid]
         return 
+

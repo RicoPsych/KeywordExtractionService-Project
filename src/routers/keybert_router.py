@@ -32,7 +32,7 @@ def info():
 def extract(req: Request):
     """Extract keywords from text
     """
-    return {"output":service.extract(req.text,req.ngram)}
+    return {"output":service.extract(req.text,req.ngram,req.lang)}
 
 
 @router.post(
@@ -44,7 +44,7 @@ def extract(req: Request):
 async def extractDataset(req: RequestDataset,background_tasks: BackgroundTasks):
     """Extract keywords from texts in dataset"""
     uuid = uuid4()
-    background_tasks.add_task( service.extractDataset,req.texts,req.ngram, asyncResults, uuid)
+    background_tasks.add_task( service.extractDataset,req.texts,req.ngram,req.lang, asyncResults, uuid)
     return {"taskId":uuid}
 
 

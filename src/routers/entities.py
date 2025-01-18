@@ -4,6 +4,7 @@ from pydantic import BaseModel
 class Request(BaseModel):
     text: str
     ngram: int | None = 3
+    lang: str | None = "en"
 
 class Response(BaseModel):
     output: list[str]
@@ -18,3 +19,4 @@ class ResponseDataset(BaseModel):
 class RequestDataset(BaseModel):
     texts: list[str]
     ngram: int | None = 3
+    lang: str | None = "en"
